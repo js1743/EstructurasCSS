@@ -47,7 +47,13 @@
             nav{   
             width: 20%;
             height: 600px;
-            float: left;
+            display: inline-block;
+            vertical-align: top;
+        }
+        main > section{
+            display: inline-block;
+            width: 74%;
+            vertical-align: top;
         }
         header, .seccion, footer{
             height: 200px;
@@ -60,8 +66,7 @@
     @media screen and (min-width:1024px){
             /*aqui inician los estilos de tableta*/
         nav{
-            background: #1cec11;
-                   
+            background: rgb(2, 250, 31);
         }
         
         header{
@@ -76,6 +81,11 @@
             background: rgb(255, 0, 128);
 
         }
+        main > section{
+            width: 76.4%;
+            
+        }
+        /*aqui terminan los estilos*/
     }
     
     </style>
