@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estructuras CSS</title>
+    <link-rel="stylesheet"  href="flexboxgrid.min.css">
     <style>
         body{
             text-align: center;
@@ -44,17 +45,7 @@
         
         @media screen and (min-width:600px){
             /*aqui inician los estilos de tableta*/
-        main{
-            display: flex;
-
-        }
-            nav{   
-            width: 20%;
-        }
-        main > section{
-           flex:1;
-
-        }
+        
         header, .seccion, footer{
             height: 200px;
             
@@ -86,28 +77,30 @@
     }
     
     </style>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu hoja de estilos aquí si es necesario -->
+    <link rel="stylesheet" href="flexboxgrid.min.css"> <!-- Enlaza tu hoja de estilos aquí si es necesario -->
 </head>
 <body>
-    <header>
-        <h1>Encabezado de la página</h1>
+    <div class="row">
+    <header class="col-xs-12">
+        <h1 class="box"> Encabezado de la página</h1>
     </header>
-<main>
-    <nav>
-        <ul>
+</div>
+<main class="row">
+    <nav class="col-xs-12 col-sm-3 col-lg-2">
+        <ul class="box">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Acerca de</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
-    <section>
-        <section class="seccion">
+    <section class="col-xs-12 col-sm-9 col-lg-10">
+        <section class="seccion box">
             <h2>Sección 1</h2>
             <p>Contenido de la primera sección...</p>
         </section>
     
-        <section class="seccion">
+        <section class="seccion box">
             <h2>Sección 2</h2>
             <p>Contenido de la segunda sección...</p>
         </section>
@@ -115,8 +108,12 @@
     </section>
 
 </main>
-    <footer>
-        <p>Pie de página - © 2024 Mi Empresa</p>
+<div class="row">
+    <footer class="col-xs-12">
+        <p class="box"> Pie de página - © 2024 Mi Empresa</p>
     </footer>
+</div>
+
+    </body>
 </body>
 </html>
