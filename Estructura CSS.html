@@ -45,22 +45,21 @@
         @media screen and (min-width:600px){
             /*aqui inician los estilos de tableta*/
         main{
-            display: flex;
-
+            display: grid;
+            grid-template-columns: 20% 80%;
+            grid-template-rows: 200px 200px;
         }
-            nav{   
-            width: 20%;
+        nav{   
+            grid-row-start: 1;
+            grid-row-end: 3;
         }
-        main > section{
-           flex:1;
-
-        }
+        
         header, .seccion, footer{
             height: 200px;
             
         }
-        footer{
-            clear: left;   
+        .seccion{
+            height: 168px
         }
     }
     @media screen and (min-width:1024px){
